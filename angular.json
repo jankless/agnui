@@ -9,7 +9,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/site",
             "index": "apps/site/src/index.html",
@@ -17,8 +19,14 @@
             "polyfills": "apps/site/src/polyfills.ts",
             "tsConfig": "apps/site/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/site/src/favicon.ico", "apps/site/src/assets"],
-            "styles": ["apps/site/src/styles.scss"],
+            "assets": [
+              "apps/site/src/favicon.ico",
+              "apps/site/src/assets"
+            ],
+            "styles": [
+              "libs/theme/src/styles.scss",
+              "apps/site/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -83,7 +91,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/site"],
+          "outputs": [
+            "coverage/apps/site"
+          ],
           "options": {
             "jestConfig": "apps/site/jest.config.js",
             "passWithNoTests": true
@@ -111,14 +121,73 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/site-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/site-e2e/**/*.{js,ts}"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["site"]
+      "implicitDependencies": [
+        "site"
+      ]
+    },
+    "theme": {
+      "root": "libs/theme",
+      "sourceRoot": "libs/theme/src",
+      "projectType": "library",
+      "architect": {},
+      "tags": []
+    },
+    "utils": {
+      "projectType": "library",
+      "root": "libs/utils",
+      "sourceRoot": "libs/utils/src",
+      "prefix": "agnui",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": [
+            "dist/libs/utils"
+          ],
+          "options": {
+            "project": "libs/utils/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/utils/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/utils/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/utils"
+          ],
+          "options": {
+            "jestConfig": "libs/utils/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/utils/src/**/*.ts",
+              "libs/utils/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
     }
   }
 }
