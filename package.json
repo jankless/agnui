@@ -6,10 +6,10 @@
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
-    "build": "nx run-many --target=affected --all",
+    "build": "nx run-many --target=affected",
     "test": "nx test",
-    "sync": "nx run-many --target=sync --all --bucket=$bucket",
-    "invalidate": "nx run-many --target=invalidate --all --id=$id"
+    "sync": "nx run-many --target=sync --bucket=$bucket",
+    "invalidate": "nx run-many --target=invalidate --id=$id"
   },
   "private": true,
   "dependencies": {
