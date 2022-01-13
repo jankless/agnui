@@ -93,7 +93,7 @@
         "sync": {
           "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "command": "aws s3 sync dist/apps/www s3://{args.bucket} --acl public-read --delete --cache-control max-age=604800"
+            "command": "aws s3 sync dist/apps/ntersol s3://{args.bucket} --acl public-read --delete --cache-control max-age=604800"
           }
         },
         "invalidate": {
