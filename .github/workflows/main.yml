@@ -10,25 +10,39 @@ jobs:
       name: Production
       url: https://d2ibmhd3aj0msb.cloudfront.net
     steps:
-      - name: Checkout
+      - name: Checkout [pr]
+        if: ${{ github.event_name == 'pull_request' }}
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+      - name: Checkout
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set SHAs
+        uses: nrwl/nx-set-shas@v2
 
-      - name: Use Node 12.x
+      - name: Use Node
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: '14'
 
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Cache Dependencies
-        uses: actions/cache@v1
-        if: success()
+      - name: Cache Configuration
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install
+        run: npm install
       - name: Build
         run: npm run build
 
