@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomePage } from './home/home.page';
 
 export interface NtsRouteData {
   header: {
@@ -119,8 +120,7 @@ export const ROUTES: NtsRoutes = [
   {
     path: '',
     pathMatch: 'full',
-    loadChildren: () =>
-      import('./home/home.module').then((m) => m.HomePageModule),
+    component: HomePage,
     data: {
       header: {
         title: '',
