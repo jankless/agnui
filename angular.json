@@ -1,6 +1,134 @@
 {
   "version": 1,
   "projects": {
+    "ntersol": {
+      "projectType": "application",
+      "root": "apps/ntersol",
+      "sourceRoot": "apps/ntersol/src",
+      "prefix": "agnui",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/apps/ntersol",
+            "index": "apps/ntersol/src/index.html",
+            "main": "apps/ntersol/src/main.ts",
+            "polyfills": "apps/ntersol/src/polyfills.ts",
+            "tsConfig": "apps/ntersol/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/ntersol/src/favicon.ico",
+              "apps/ntersol/src/assets"
+            ],
+            "styles": [
+              "apps/ntersol/src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/marked/lib/marked.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/ntersol/src/environments/environment.ts",
+                  "with": "apps/ntersol/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "ntersol:build:production"
+            },
+            "development": {
+              "browserTarget": "ntersol:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ntersol:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/ntersol/src/**/*.ts",
+              "apps/ntersol/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "nts": {
+      "projectType": "library",
+      "root": "libs/nts",
+      "sourceRoot": "libs/nts/src",
+      "prefix": "agnui",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": [
+            "dist/libs/nts"
+          ],
+          "options": {
+            "project": "libs/nts/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/nts/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/nts/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/nts/src/**/*.ts",
+              "libs/nts/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "site": {
       "projectType": "application",
       "root": "apps/site",

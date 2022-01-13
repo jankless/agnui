@@ -1,0 +1,17 @@
+<header *ngIf="logoSrc && logoAlt" class="container">
+    <img [src]="logoSrc" [alt]="logoAlt" width="200" height="auto">
+    <nav>
+        <a [routerLink]="'services'">Services</a>
+        <a [routerLink]="'expertise'">Industries</a>
+        <a [routerLink]="'success-stories'">Success Stories</a>
+        <a [routerLink]="'careers'">Careers</a>
+        <a [routerLink]="'company'">Company</a>
+        <a [routerLink]="'contact'">Contact Us</a>
+        <a [routerLink]="'posts'">Blog</a>
+    </nav>
+</header>
+
+<div *ngIf="title && description" class="container text-white">
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+</div>

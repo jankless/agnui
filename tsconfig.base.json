@@ -15,8 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@agnui/utils": ["libs/utils/src/index.ts"],
-      "@agnui/styles": ["libs/styles/src/index.ts"]
+      "@agnui/nts": ["libs/nts/src/index.ts"],
+      "@agnui/styles": ["libs/styles/src/index.ts"],
+      "@agnui/utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
