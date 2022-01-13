@@ -6,7 +6,7 @@
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
-    "build": "nx build",
+    "build": "nx run-many target=affected --all",
     "test": "nx test",
     "sync": "nx run-many --target=sync --all --bucket=$bucket",
     "invalidate": "nx run-many --target=invalidate --all --id=$id"
