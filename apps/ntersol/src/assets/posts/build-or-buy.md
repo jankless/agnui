@@ -1,5 +1,4 @@
 ---
-category: mortgage,crm
 title: 'Build or Buy'
 description: 'Mortgage Lending CRM: Should You Build or Buy?'
 ---

@@ -1,5 +1,4 @@
 ---
-category: null
 title: Right Leads
 description: How to Make Sure Every Loan Officer Gets the Right Leads
 ---

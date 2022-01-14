@@ -1,5 +1,4 @@
 ---
-category: null
 title: Biggest Lending Opportunities
 description: How to Tap the Biggest Lending Opportunities Post-Refi Boom
 ---

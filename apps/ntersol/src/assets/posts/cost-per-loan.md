@@ -1,5 +1,4 @@
 ---
-category: mortgage,crm
 title: 'Cost Per Loan'
 description: 'Cost Per Loan Too High? 4 Things Mortgage Lenders Should Check'
 ---
