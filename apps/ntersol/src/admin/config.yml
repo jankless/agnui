@@ -1,28 +1,31 @@
+site_url: https://hardcore-darwin-90447f.netlify.app/
+logo_url: https://hardcore-darwin-90447f.netlify.app/assets/icons/ntersol/ntersol.svg
+
+publish_mode: editorial_workflow
 backend:
   name: git-gateway
-  branch: master
+  branch: netlify
+  squash_merges: true
 
-media_folder: 'src/assets/images' # Folder where user uploaded files should go
-public_folder: 'assets/images'
-publish_mode: editorial_workflow
+# used together with `npx netlify-cms-proxy-server`. https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
+local_backend: true
 
-collections: # A list of collections the CMS should be able to edit
-  - name: 'blog' # Used in routes, ie.: /admin/collections/:slug/edit
-    label: 'Blog' # Used in the UI, ie.: "New Post"
-    folder: 'posts' # (src/assets/blog) The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - { label: 'Title', name: 'title', widget: 'string', required: false }
+media_folder: apps/ntersol/src/assets
+public_folder: /assets
+
+# Docs: https://www.netlifycms.org/docs/configuration-options/#collections
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'apps/ntersol/src/assets/posts'
+    create: true
+    format: 'frontmatter'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
       - {
           label: 'Description',
           name: 'description',
-          widget: 'text',
+          widget: 'string',
           required: false,
         }
-      - {
-          label: 'Publish',
-          name: 'publish',
-          widget: 'boolean',
-          required: false,
-        }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }

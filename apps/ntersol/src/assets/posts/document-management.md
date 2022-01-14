@@ -1,3 +1,9 @@
+---
+category:
+title:
+description:
+---
+
 # How our Document Management System Makes Life Easier for Mortgage Lenders
 
 ###### December 10, 2021
