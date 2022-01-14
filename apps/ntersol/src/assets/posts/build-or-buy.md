@@ -1,9 +1,8 @@
 ---
-title: 'Build or Buy'
-description: 'Mortgage Lending CRM: Should You Build or Buy?'
+title: Build or Buy
+description: "Mortgage Lending CRM: Should You Build or Buy?"
 ---
-
-# Mortgage Lending CRM: Should You Build or Buy?
+# Mortgage Lending CRM: Should You Buy or Buy?
 
 ###### November 16, 2021
 
@@ -45,9 +44,9 @@ Custom-built CRMs tend to be a better fit for mid-sized lenders because they ena
 
 A custom CRM might, for example, include scripters for LOs that take the guesswork out of interacting with new leads, whether they’re coming in from the call center or elsewhere. Custom platforms also make it possible for LOs to run highly specialized dial campaigns that make it easier to connect with the leads most likely to convert. And then there’s the industry-specific logic custom CRMs can layer into various campaigns and automations. For example, custom software can incorporate:
 
-- Logic that feeds “stale” leads – those that have been in the system for 30 days, say – to LOs during times when other lead sources aren’t as abundant.
-- Logic that lets loan officers poach each other’s leads after three days of inactivity.
-- Bulk and personal dialers that automate the outbound dials to a LO’s pipeline.
+* Logic that feeds “stale” leads – those that have been in the system for 30 days, say – to LOs during times when other lead sources aren’t as abundant.
+* Logic that lets loan officers poach each other’s leads after three days of inactivity.
+* Bulk and personal dialers that automate the outbound dials to a LO’s pipeline.
 
 All of these help lenders [maximize the value of each lead](https://ntersol.com/blog/how-to-make-sure-every-loan-officer-gets-the-right-leads/) and its likelihood to convert while also ensuring the best-possible customer experience.
 
@@ -63,8 +62,8 @@ More to the point, though, if a lot of their customers could benefit from having
 
 In addition to new features, CRMs require the kinds of updates any software does: bug fixes, software patches, and so on. CRMs for mortgage lending may also need another kind of maintenance: updates to accommodate changing industry regulations. These maintenance tasks are handled differently with custom and off-the-shelf software:
 
-- Off-the-shelf: Vendors push updates to customers as needed. Very little effort is required on the customers’ end – usually just clicking “update” or “download.”
-- Custom: Lenders decide whether they’d like to handle patches and bug fixes in house (which tends to work well for those who have an IT team comfortable with such work) or have their developer partner manage them.
+* Off-the-shelf: Vendors push updates to customers as needed. Very little effort is required on the customers’ end – usually just clicking “update” or “download.”
+* Custom: Lenders decide whether they’d like to handle patches and bug fixes in house (which tends to work well for those who have an IT team comfortable with such work) or have their developer partner manage them.
 
 Regulatory updates are similar, but there’s an important caveat here. While off-the-shelf CRM providers will make needed updates to their systems and push them to lenders – meaning customers have less work to do on the back end – lenders have no control over the timing of these updates.
 
@@ -76,6 +75,6 @@ While lenders are responsible for updating custom software as regulations change
 
 For more insight into which solution makes the most sense for your unique situation, [get in touch](https://ntersol.com/). We’d love to help you figure out the path forward most likely to drive the ROI you need.
 
-###### _Author: Mark Hansen_
+###### *Author: Mark Hansen*
 
-###### _About: Mark Hansen is chief product officer at NTERSOL. For more than two decades, he’s been developing digital solutions for mortgage and real estate. In his current role, Mark combines his deep industry and technical knowledge with his communication prowess to solve clients’ thorniest problems and make sure everyone involved is on the same page throughout the process._
+###### *About: Mark Hansen is chief product officer at NTERSOL. For more than two decades, he’s been developing digital solutions for mortgage and real estate. In his current role, Mark combines his deep industry and technical knowledge with his communication prowess to solve clients’ thorniest problems and make sure everyone involved is on the same page throughout the process.*
