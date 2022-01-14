@@ -21,7 +21,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "apps/ntersol/src/favicon.ico",
-              "apps/ntersol/src/assets"
+              "apps/ntersol/src/assets",
+              "apps/ntersol/src/admin"
             ],
             "styles": [
               "apps/ntersol/src/styles.scss"

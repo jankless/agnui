@@ -1,3 +1,13 @@
+---
+category: food
+title: 'Build or Buy'
+description: 'Mortgage Lending CRM: Should You Build or Buy?'
+cover: https://baconmockup.com/400/200
+gallery:
+  - https://baconmockup.com/600/300
+  - https://baconmockup.com/600/600
+---
+
 # Mortgage Lending CRM: Should You Build or Buy?
 
 ###### November 16, 2021
