@@ -1,5 +1,5 @@
 ---
-title: Build or Buy
+title: Buy or Buy
 description: "Mortgage Lending CRM: Should You Build or Buy?"
 ---
 # Mortgage Lending CRM: Should You Buy or Buy?
