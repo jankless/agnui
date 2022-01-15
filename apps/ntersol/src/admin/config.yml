@@ -4,7 +4,7 @@ logo_url: https://hardcore-darwin-90447f.netlify.app/assets/icons/ntersol/nterso
 publish_mode: editorial_workflow
 backend:
   name: git-gateway
-  branch: netlify
+  branch: main
   squash_merges: true
 
 # used together with `npx netlify-cms-proxy-server`. https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
