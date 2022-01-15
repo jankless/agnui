@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, switchMap } from 'rxjs';
+import fm from 'front-matter';
+import { map, Observable, switchMap } from 'rxjs';
 import { Posts } from '../posts/posts.page';
 
 @Component({
@@ -19,6 +20,12 @@ export class PostPage {
         return this.http.get(`assets/posts/${post?.file}`, {
           responseType: 'text',
         });
+      }),
+      map((res) => {
+        let result = fm(res) as any;
+        console.log(result.attributes);
+        console.log(result.attributes.title);
+        return result.body;
       })
     );
   constructor(private route: ActivatedRoute, private http: HttpClient) {}

@@ -1,3 +1,8 @@
+---
+title: Biggest Lending Opportunities
+description: How to Tap the Biggest Lending Opportunities Post-Refi Boom
+---
+
 # How to Tap the Biggest Lending Opportunities Post-Refi Boom
 
 ###### January 04, 2022

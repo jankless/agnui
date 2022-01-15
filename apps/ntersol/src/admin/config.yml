@@ -1,0 +1,31 @@
+site_url: https://hardcore-darwin-90447f.netlify.app/
+logo_url: https://hardcore-darwin-90447f.netlify.app/assets/icons/ntersol/ntersol.svg
+
+publish_mode: editorial_workflow
+backend:
+  name: git-gateway
+  branch: main
+  squash_merges: true
+
+# used together with `npx netlify-cms-proxy-server`. https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
+local_backend: true
+
+media_folder: apps/ntersol/src/assets
+public_folder: /assets
+
+# Docs: https://www.netlifycms.org/docs/configuration-options/#collections
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'apps/ntersol/src/assets/posts'
+    create: true
+    format: 'frontmatter'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - {
+          label: 'Description',
+          name: 'description',
+          widget: 'string',
+          required: false,
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }

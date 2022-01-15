@@ -1,3 +1,8 @@
+---
+title: 'Cost Per Loan'
+description: 'Cost Per Loan Too High? 4 Things Mortgage Lenders Should Check'
+---
+
 # Cost Per Loan Too High? 4 Things Mortgage Lenders Should Check
 
 ###### October 08, 2021
