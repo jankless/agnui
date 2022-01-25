@@ -1,6 +1,52 @@
 {
   "version": 1,
   "projects": {
+    "base": {
+      "projectType": "library",
+      "root": "libs/base",
+      "sourceRoot": "libs/base/src",
+      "prefix": "agnui",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": [
+            "dist/libs/base"
+          ],
+          "options": {
+            "project": "libs/base/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/base/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/base/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/base"
+          ],
+          "options": {
+            "jestConfig": "libs/base/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/base/src/**/*.ts",
+              "libs/base/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "ntersol": {
       "projectType": "application",
       "root": "apps/ntersol",

@@ -1,13 +1,29 @@
-section {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
+:host {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content auto min-content;
+  grid-template-areas: 'header' 'main' 'footer';
+  padding: 1ch;
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
 }
 
-img {
-  filter: grayscale(1) blur(4px);
-  margin: 1vw;
-  width: 10vw;
+button {
+  position: fixed;
+  background-color: #bdbdbd;
+  right: 0;
+  bottom: 0;
+  margin-right: 32px;
+  margin-bottom: 32px;
 }

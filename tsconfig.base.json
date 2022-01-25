@@ -16,8 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@agnui/nts": ["libs/nts/src/index.ts"],
-      "@agnui/styles": ["libs/styles/src/index.ts"],
-      "@agnui/utils": ["libs/utils/src/index.ts"]
+      "@agnui/utils": ["libs/utils/src/index.ts"],
+      "@angui/base": ["libs/base/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

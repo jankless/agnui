@@ -12,7 +12,7 @@
         "@angular-eslint/directive-selector": [
           "error",
           {
-            "type": "attribute",
+            "type": "html-selector",
             "prefix": "agnui",
             "style": "camelCase"
           }
@@ -22,8 +22,7 @@
           {
             "type": "html-selector",
             "prefix": "agnui",
-            "style": "kebab-case",
-            "suffixes": ["page"]
+            "style": "kebab-case"
           }
         ]
       }

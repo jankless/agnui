@@ -7,7 +7,7 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx run-many --target=build --all",
-    "test": "nx test",
+    "test": "nx test --watch",
     "sync": "nx run-many --target=sync --all --bucket=$bucket",
     "invalidate": "nx run-many --target=invalidate --all --id=$id"
   },
@@ -23,6 +23,7 @@
     "@angular/router": "~13.1.0",
     "@nrwl/angular": "13.4.3",
     "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.7.2",
     "front-matter": "^4.0.2",
     "ngx-markdown": "^13.0.0",
     "rxjs": "~7.4.0",
