@@ -14,6 +14,12 @@
     grid-area: main;
   }
 
+  header,
+  main {
+    max-width: 400px;
+    margin: 2ch auto 0.5ch;
+  }
+
   footer {
     grid-area: footer;
   }

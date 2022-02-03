@@ -1,5 +1,5 @@
+import { BaseModule } from '@agnui/base';
 import { UtilsModule } from '@agnui/utils';
-import { BaseModule } from '@angui/base';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
