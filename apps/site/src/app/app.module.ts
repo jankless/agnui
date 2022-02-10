@@ -15,8 +15,7 @@ import { HomePage } from './home/home.page';
     BrowserAnimationsModule,
     HomePageModule,
     RouterModule.forRoot([
-      { path: 'home', component: HomePage },
-      { path: '', pathMatch: 'full', redirectTo: 'home' },
+      { path: '', pathMatch: 'full', component: HomePage },
     ]),
     UtilsModule,
     BaseModule,
