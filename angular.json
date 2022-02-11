@@ -43,6 +43,21 @@
       },
       "tags": []
     },
+    "enums": {
+      "root": "libs/enums",
+      "sourceRoot": "libs/enums/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/enums/**/*.ts"]
+          }
+        }
+      },
+      "tags": []
+    },
     "site": {
       "projectType": "application",
       "root": "apps/site",
@@ -182,48 +197,6 @@
       "sourceRoot": "libs/theme/src",
       "projectType": "library",
       "architect": {},
-      "tags": []
-    },
-    "utils": {
-      "projectType": "library",
-      "root": "libs/utils",
-      "sourceRoot": "libs/utils/src",
-      "prefix": "agnui",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "outputs": ["dist/libs/utils"],
-          "options": {
-            "project": "libs/utils/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/utils/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "libs/utils/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/utils"],
-          "options": {
-            "jestConfig": "libs/utils/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/utils/src/**/*.ts",
-              "libs/utils/src/**/*.html"
-            ]
-          }
-        }
-      },
       "tags": []
     }
   }

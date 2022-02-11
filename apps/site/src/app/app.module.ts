@@ -1,5 +1,4 @@
 import { BaseModule } from '@agnui/base';
-import { UtilsModule } from '@agnui/utils';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,14 +10,13 @@ import { HomePage } from './home/home.page';
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    BaseModule,
     BrowserModule,
     BrowserAnimationsModule,
     HomePageModule,
     RouterModule.forRoot([
       { path: '', pathMatch: 'full', component: HomePage },
     ]),
-    UtilsModule,
-    BaseModule,
   ],
   bootstrap: [AppComponent],
 })
