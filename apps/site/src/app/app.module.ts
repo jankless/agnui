@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { ConfigPageModule } from './config/config.module';
+import { ConfigPage } from './config/config.page';
 import { HomePageModule } from './home/home.module';
 import { HomePage } from './home/home.page';
 
@@ -14,7 +16,9 @@ import { HomePage } from './home/home.page';
     BrowserModule,
     BrowserAnimationsModule,
     HomePageModule,
+    ConfigPageModule,
     RouterModule.forRoot([
+      { path: 'config', component: ConfigPage },
       { path: '', pathMatch: 'full', component: HomePage },
     ]),
   ],
