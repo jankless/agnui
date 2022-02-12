@@ -44,15 +44,18 @@
       "tags": []
     },
     "enums": {
+      "projectType": "library",
       "root": "libs/enums",
       "sourceRoot": "libs/enums/src",
-      "projectType": "library",
       "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+        "build": {
+          "builder": "@nrwl/js:tsc",
+          "outputs": ["{options.outputPath}"],
           "options": {
-            "lintFilePatterns": ["libs/enums/**/*.ts"]
+            "outputPath": "dist/libs/enums",
+            "main": "libs/enums/src/index.ts",
+            "tsConfig": "libs/enums/tsconfig.lib.json",
+            "assets": ["libs/enums/*.md"]
           }
         }
       },
