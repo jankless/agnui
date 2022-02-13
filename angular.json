@@ -77,15 +77,15 @@
             "polyfills": "apps/site/src/polyfills.ts",
             "tsConfig": "apps/site/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/site/src/favicon.ico", "apps/site/src/assets"],
+            "assets": ["apps/site/src/assets"],
             "styles": [
               "libs/theme/src/styles.scss",
               "apps/site/src/styles.scss"
-            ],
-            "scripts": []
+            ]
           },
           "configurations": {
             "production": {
+              "outputHashing": "all",
               "budgets": [
                 {
                   "type": "initial",
@@ -103,8 +103,7 @@
                   "replace": "apps/site/src/environments/environment.ts",
                   "with": "apps/site/src/environments/environment.prod.ts"
                 }
-              ],
-              "outputHashing": "all"
+              ]
             },
             "development": {
               "buildOptimizer": false,
