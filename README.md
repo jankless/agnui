@@ -1,9 +1,16 @@
 # AGNUI
 
-- UI Components Agnostic of Device.
-- For example, use on:
-  - iOS, Android, Windows, macOS, PlayStation, Xbox, Samsung, LG, Vizio
+- Angular solutions that work.
 
-## Supported input devices:
+Schematics to build:
 
-- mouse, keyboard, remote (spatial navigation)
+- `ng-add` - init
+  - initialize angular project with agnui schematics
+  - adds necessary dependencies
+  - updates necessary files
+- `ng g` PWA
+  - icon input to generate assets
+  - publish config for supported stores/destinations
+    - iOS, macOS, tvOS, Roku OS, Fire OS, webOS, Android, Windows, Xbox, PlayStation, Web
+    - user inputs (mouse, touch, keyboard, remote) -- remote uses spatial navigation
+- builder to handle the publish of various supported stores/destinations
