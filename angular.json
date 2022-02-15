@@ -77,7 +77,14 @@
             "polyfills": "apps/site/src/polyfills.ts",
             "tsConfig": "apps/site/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/site/src/assets"],
+            "assets": [
+              {
+                "glob": "*",
+                "input": "apps/site/src/root-assets",
+                "output": "."
+              },
+              "apps/site/src/assets"
+            ],
             "styles": [
               "libs/theme/src/styles.scss",
               "apps/site/src/styles.scss"

@@ -1,7 +1,0 @@
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <g>
-        <line class="path" x1="50" y1="6" x2="10" y2="70" stroke="black" stroke-width="5px" stroke-linecap="round" />
-        <line class="path" x1="50" y1="6" x2="90" y2="70" stroke="black" stroke-width="5px" stroke-linecap="round" />
-        <circle class="path" cx="50" cy="45" r="14" stroke="black" stroke-width="3px" fill="none" />
-    </g>
-</svg>
